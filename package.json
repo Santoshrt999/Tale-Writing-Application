@@ -1,0 +1,15 @@
+{
+  "name": "talewriting",
+  "version": "1.0.0",
+  "description": "An app to write tales or stories",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Santosh Goteti",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0-rc0"
+  }
+}
