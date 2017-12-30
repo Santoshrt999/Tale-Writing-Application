@@ -10,9 +10,8 @@ module.exports = function(passport){
         callbackURL: '/auth/google/callback',
         proxy: true
             },(accessToken, refreshToken, profile, done)=>{
-                console.log(accessToken);
-                console.log(done);
-
+              //code to do..
+console.log(profile);
             })
     )
 
