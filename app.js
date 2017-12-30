@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 //load model
 
-reuire('./models/User');
+require('./models/User');
 //passport coni
 require('./config/passport')(passport);
 
