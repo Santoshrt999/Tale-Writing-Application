@@ -1,4 +1,8 @@
    <h1 class="display-1">Welcome Folks!</h1>
 <p> Welcome to Tale Writing. Version: 1.9.9</p>
 <p>Post tales which you think are your best in your life and share with others using this website</p>
+{{#if user}}
+
+{{else}}
 <a class="btn red darken-1" href="/auth/google"><i class="fa fa-google left"></i> Login with Google</a>
+{{/if}}

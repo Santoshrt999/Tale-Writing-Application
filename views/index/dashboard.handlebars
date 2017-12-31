@@ -1,0 +1,33 @@
+<h3>Hi, {{user.firstName}}</h3>
+<h4>Your Tales</h4>
+{{#if tales}}
+<table class="striped">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each tales}}
+    <tr>
+        <td><a href="/tales/show/{{id}}">{{title}}</a></td>
+        <td>{{formatDate date 'MMMM Do YYYY'}}</td>
+        <td class="text-transform capitalize">{{status}}</td>
+        <td><a class="btn left-align" href="/tales/edit/{{id}}"<i class="fa fa-pencil">Edit</a>
+        
+        <form action="/tales/{{id}}?_method=DELETE" method="post" id="delete-form">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="btn red"><i class="fa fa-remove"></i>Delete</button>
+        </form>
+        </td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+
+
+{{else}}
+<p> You haven't posted any tales yet.</p>
+{{/if}}

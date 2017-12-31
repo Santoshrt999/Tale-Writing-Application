@@ -1,0 +1,39 @@
+<h1>Edit Tale</h1>
+<div class="row">
+    <form action="/tales/{{tale.id}}?_method=PUT" method="post" class="col s12">
+    <input type="hidden" name="_method" value="PUT">
+    <div class="row">
+        <div class="input-field">
+            <input type="text" name="title" value="{{tale.title}}">
+            <label for="title">Title</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field">
+            <select name="status">
+                {{#select tale.status}}
+            <option value="public" selected>Public</option>
+            <option value="private">Private</option>
+            <option value="unpublished">Unpublished</option>
+            {{/select}}
+            </select>
+            <label for="status">Status</label>
+        </div>
+    </div>
+    <div class="row">
+        <p>
+            <input type="checkbox" name="allow comments" class="filled-in"
+            id="filled-in box" {{#if tale.allowComments}}checked="checked" {{/if}}>
+            <label for="filled-in box">Allow Comments</label>
+        </p>
+    </div>
+        <div class="row">
+        <div class="input-field">
+            <h5>Share it below!</h5>
+            <textarea name="body">{{tale.body}}</textarea>
+             </div>
+    </div>
+
+    <input type="submit" value="Save" class="btn btn-outline-primary">
+    </form>
+</div>
